@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Notes</title>
+    <script>
+        async function loadNotes() {
+            const res = await fetch('/api/notes');
+            const notes = await res.json();
+            document.getElementById('notes').innerHTML = notes.map(n => `<li>${n.text}</li>`).join('');
+        }
+
+        async function saveNote() {
+            const text = document.getElementById('note').value;
+            await fetch('/api/notes', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({text})
+            });
+            document.getElementById('note').value = '';
+            loadNotes();
+        }
+    </script>
+</head>
+<body onload="loadNotes()">
+    <h1>Sticky Notes</h1>
+    <textarea id="note"></textarea><br/>
+    <button onclick="saveNote()">Save</button>
+    <ul id="notes"></ul>
+</body>
+</html>
