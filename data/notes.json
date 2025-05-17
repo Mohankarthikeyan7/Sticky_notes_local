@@ -1,1 +1,12 @@
-[{"text": "Hi there, this is my project 5 (daily notes)"}, {"text": "hi there, second test again, "}]
+[
+  {
+    "text": "Hi there, this is my project 5 (daily notes)"
+  },
+  {
+    "text": "hi there, second test again, "
+  },
+  {
+    "text": "hi there, this is me again, testing",
+    "timestamp": "2025-05-17T17:40:58.846078"
+  }
+]
