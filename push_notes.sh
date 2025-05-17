@@ -1,5 +1,8 @@
 #!/bin/bash
-cd /var/lib/docker/volumes/notes_data/_data
+
+cd "$(dirname "$0")/data"
+
 git add notes.json
-git commit -m "Daily backup at $(date)"
+git commit -m "Automated backup at $(date '+%Y-%m-%d %H:%M:%S')"
 git push origin main
+
