@@ -1,5 +1,5 @@
 📒 Flask Notes App
-A simple, containerized web application to store and manage personal learning notes — built with Flask, Docker, and GitHub for everyday productivity.
+A simple, containerized web application to store and manage personal learning notes built with Flask, Docker, and GitHub for everyday productivity.
 
 🔍 Project Overview
 Managing daily notes while learning can get overwhelming — especially when scattered across devices or stored locally. This project was built to solve that.
@@ -50,7 +50,7 @@ Git installed (for cloning the repo)
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/flask-notes-app.git
+git clone https://github.com/Mohankarthikeyan7/Sticky_notes_local
 cd flask-notes-app
 docker build -t flask-notes .
 docker run -p 5000:5000 flask-notes
@@ -69,6 +69,7 @@ flask-notes-app/
 │   └── index.html     # Web form interface
 ├── Dockerfile
 └── README.md
+
 🔗 API Endpoint
 Add a note:
 http
